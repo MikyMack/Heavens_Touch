@@ -403,32 +403,46 @@ document.addEventListener("DOMContentLoaded", function() {
 			<div class="res-log">
 
 				<a href="/">
-
 					<img src="/images/churchlogo.png" alt="Responsive Logo" style="width: 200px;">
-
 				</a>
 
 			</div>
 
 			<ul>
-
 				<li>
-
 					<a href="/">Home</a>
-
 				</li>
-
 				<li ><a href="/about">About Us</a>
-
 				</li>
 				<li><a href="/faith-statement">Faith Statement</a>
 				</li>
 				<li><a href="/gallery">Our Gallery</a>
-
 				</li>
-
 				<li><a href="/contact">Contact</a></li>
+			</ul>
 
+			<!-- Social Media Links at bottom -->
+			<ul class="social-medias" style="margin-top:30px;display:flex;gap:13px;justify-content:center;">
+				<li>
+					<a href="https://youtube.com/@htministries?si=YVHJ0dWkkpngniVa" target="_blank" rel="noopener">
+						<img src="/images/youtube.png" alt="YouTube" style="width: 40px;">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.threads.com/@vinod_wilfred" target="_blank" rel="noopener">
+						<img src="/images/threads.png" alt="Threads" style="width: 40px;">
+					</a>
+				</li>
+				<li>
+					<a href="https://whatsapp.com/channel/0029VaAOzgWAojZ1jU0WvS3k" target="_blank" rel="noopener">
+						<img src="/images/whatsapp.png" alt="WhatsApp" style="width: 40px;">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/heavenstouchministries?igsh=dmIwejVqZHl2bnQ4" target="_blank" rel="noopener">
+						<img src="/images/instagram.png" alt="Instagram" style="width: 40px;">
+					</a>
+				</li>
 			</ul>
 
 			<a href="JavaScript:void(0)" id="res-cross"></a>
@@ -1401,32 +1415,35 @@ document.addEventListener("DOMContentLoaded", function() {
 	</button>
 	<script>
 	(function(){
-		// Show button only on mobile devices
 		function updateButtonDisplay() {
 			var btn = document.getElementById('floatingWatchLiveBtn');
-			if(window.innerWidth <= 600){
-				btn.style.display = 'flex';
-			} else {
-				btn.style.display = 'none';
+			if (btn) {
+				if(window.innerWidth <= 600){
+					btn.style.display = 'flex';
+				} else {
+					btn.style.display = 'none';
+				}
 			}
 		}
 		window.addEventListener('resize', updateButtonDisplay);
 		window.addEventListener('orientationchange', updateButtonDisplay);
-		document.addEventListener('DOMContentLoaded', updateButtonDisplay);
+		document.addEventListener('DOMContentLoaded', function() {
+			updateButtonDisplay();
 
-		// Reuse same modal as desktop
-		const floatingBtn = document.getElementById('floatingWatchLiveBtn');
-		const popup = document.getElementById('liveStreamPopup');
-		const iframe = document.getElementById('liveStreamIframe');
-		const streamUrl = "https://www.youtube.com/embed/live_stream?channel=UC8k4vl2wBEm90LkAMPxQqvA&autoplay=1";
-
-		function openPopup(e) {
-			e.preventDefault();
-			iframe.src = streamUrl;
-			popup.style.display = "flex";
-			document.body.style.overflow = "hidden";
-		}
-		floatingBtn.addEventListener('click', openPopup);
+			// Button/modal logic
+			var floatingBtn = document.getElementById('floatingWatchLiveBtn');
+			var popup = document.getElementById('liveStreamPopup');
+			
+			// Defensive: check elements exist before adding listener
+			if (floatingBtn && popup) {
+				floatingBtn.addEventListener('click', function(e) {
+					e.preventDefault();
+					// Just show the modal, don't look for iframe or set src
+					popup.style.display = "flex";
+					document.body.style.overflow = "hidden";
+				});
+			}
+		});
 	})();
 	</script>
 	<!-- Scroll to top -->
