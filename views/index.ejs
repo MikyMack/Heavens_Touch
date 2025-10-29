@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Heaven’s Touch Ministries – Spirit-Filled Church in Trivandrum, Kerala</title>
+	<meta name="description" content="Experience God’s love and power at Heaven’s Touch Ministries, a Spirit-filled Christian church in Trivandrum where lives are healed and hearts restored.">
+	<meta name="keywords" content="Heaven’s Touch Ministries, Spirit filled church Trivandrum, Christian church Kerala, Holy Spirit worship, Bible based ministry, Trivandrum churches, Pentecostal church Kerala, Healing and deliverance ministry, Worship and prayer Kerala, Jesus Christ church Trivandrum, Gospel ministry Kerala, Faith church Trivandrum">
+  
+	<!-- Bootstrap -->
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+	<!-- Favicon -->
+
+	<link rel="icon" type="image/x-icon" href="/images/pastor-icon.webp">
+
+	<!-- Slick Slider -->
+
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+
+	<!-- Animate -->
+
+	<link rel="stylesheet" type="text/css" href="/css/animate.min.css">
+
+
+	<!-- Animate on scroll -->
+
+	<link rel="stylesheet" type="text/css" href="/css/aos.css">
+
+
+	<!-- Fancy Box -->
+
+	<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+
+	<!-- Stylesheet -->
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+
+	<!-- Colors -->
+
+	<link rel="stylesheet" type="text/css" href="/css/color.css">
+
+
+
+	<!-- Responsive -->
+
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+
+
+
+</head>
+
+<body>
+	
+	<audio id="background-music" src="/audio/holy.mp3" loop preload="auto" autoplay style="display:none;"></audio>
+	<script>
+	(function() {
+		var music = document.getElementById('background-music');
+		music.volume = 0.1;
+
+		// Try to play immediately for fastest possible playback (including before DOMContentLoaded)
+		function tryPlayMusic() {
+			// If the browser blocks autoplay, we fallback to user gesture
+			music.play().catch(function() {
+				var played = false;
+				function unlockOnInteraction() {
+					if (played) return;
+					music.play().catch(function(){});
+					played = true;
+					document.removeEventListener('click', unlockOnInteraction);
+					document.removeEventListener('touchstart', unlockOnInteraction);
+				}
+				document.addEventListener('click', unlockOnInteraction, { once: true });
+				document.addEventListener('touchstart', unlockOnInteraction, { once: true });
+			});
+		}
+
+		// Attempt to play as soon as possible, covering all browser behaviors
+		tryPlayMusic();
+		// Some browsers will fully enable media after DOM ready/load, so try again there
+		document.addEventListener('DOMContentLoaded', tryPlayMusic, { once: true });
+		window.addEventListener('load', tryPlayMusic, { once: true });
+	})();
+	</script>
+	<!-- Loader Start -->
+	<div id="custom-loader">
+		<img src="/images/churchlogo.png" alt="Loading...">
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			setTimeout(function() {
+				var loader = document.getElementById("custom-loader");
+				if (loader) loader.style.display = "none";
+			}, 2000);
+		});
+	</script>
+	<!-- Loader End -->
+<!-- Background Music -->
+<audio id="background-music" src="/audio/holy.mp3" preload="auto" loop></audio>
+
+<!-- Music Permission Popup -->
+<div id="music-popup" class="music-popup">
+  <div class="music-popup-content">
+    <h3>Would you like to play music?</h3>
+    <p>It enhances the prayerful experience.</p>
+    <button id="play-music-btn">Yes, Play</button>
+    <button id="no-music-btn" class="no-btn">No, Thanks</button>
+  </div>
+</div>
+
+<style>
+.music-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: "Poppins", sans-serif;
+}
+.music-popup-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  animation: pop 0.3s ease;
+}
+.music-popup-content h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.music-popup-content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #444;
+}
+.music-popup-content button {
+  padding: 10px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+#play-music-btn {
+  background: #800020;
+  color: white;
+}
+.no-btn {
+  background: #ddd;
+}
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("music-popup");
+  const playBtn = document.getElementById("play-music-btn");
+  const noBtn = document.getElementById("no-music-btn");
+  const music = document.getElementById("background-music");
+
+  // If choice exists, skip popup
+  const savedChoice = localStorage.getItem("musicPreference");
+  if(savedChoice === "yes") {
+    music.play();
+    popup.style.display = "none";
+  } else if(savedChoice === "no") {
+    popup.style.display = "none";
+  }
+
+  playBtn.addEventListener("click", () => {
+    music.volume = 0.5;
+    music.play();
+    popup.style.display = "none";
+    localStorage.setItem("musicPreference", "yes");
+  });
+
+  noBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+    localStorage.setItem("musicPreference", "no");
+  });
+});
+</script>
+
+
+
+
+
+	<!-- Header One Start -->
+
+	<header class="header-one">
+
+		<div class="top-bar">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-lg-9">
+
+						<ul class="login">
+							<li>
+							  <a href="JavaScript:void(0)">
+								<img src="/images/user-profile.svg" alt="Heaven’s Touch Ministries">
+								Welcome to Heaven’s Touch Ministries — where lives are transformed by God’s love and power.
+							  </a>
+							</li>
+						  
+							<li>
+						  
+
+					</div>
+
+					<div class="col-lg-2 offset-1">
+
+						<ul class="social-medias">
+
+							<li><a href="https://youtube.com/@htministries?si=YVHJ0dWkkpngniVa"><img src="/images/youtube.png" alt="facebook"></a>
+							</li>
+							<li><a href="https://www.threads.com/@vinod_wilfred"><img src="/images/threads.png" alt="facebook"></a>
+							</li>
+
+							<li><a href="https://whatsapp.com/channel/0029VaAOzgWAojZ1jU0WvS3k"><img src="/images/whatsapp.png" alt="twitter"></a>
+							</li>
+
+							<li><a href="https://www.instagram.com/heavenstouchministries?igsh=dmIwejVqZHl2bnQ4"><img src="/images/instagram.png" alt="instagram"></a>
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="desktop-nav" id="stickyHeader">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-lg-12">
+
+						<nav>
+
+							<div class="logo">
+
+								<a href="/">
+
+									<img src="/images/churchlogo.png" alt="Logo" class="churchLogo">
+
+								</a>
+
+							</div>
+
+							<div class="nav-bar">
+
+								<ul>
+
+									<li>
+										<a style="color: #deb246;" href="/">Home</a>
+									</li>
+
+									<li><a href="/about">About US</a>
+
+									</li>
+									<li><a href="/faith-statement">Faith Statement</a>
+									</li>
+
+									<li><a href="/gallery">Gallery</a>
+									</li>
+
+									<li><a href="/contact">Contact</a></li>
+
+								</ul>
+
+							</div>
+
+							<div class="donation">
+								<a href="#" class="theme-btn" id="watchLiveBtn">Watch Live</a>
+							</div>
+							<!-- Live Stream Popup -->
+							<div id="liveStreamPopup" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.67);justify-content:center;align-items:center;">
+								<div id="liveStreamModalContent" style="background:#222;border-radius:14px;max-width:96vw;max-height:90vh;position:relative;box-shadow:0 6px 40px #1119;">
+									<button id="closeLiveStreamPopup" aria-label="Close" style="position:absolute;right:12px;top:10px;background:none;border:none;font-size:2rem;color:#fff;cursor:pointer;line-height:1;z-index:2;">
+										&times;
+									</button>
+									<%
+										let video = null;
+										if (Array.isArray(youtubeVideo) && youtubeVideo.length > 0) {
+											video = youtubeVideo[0];
+										} else if (youtubeVideo && youtubeVideo.link) {
+											video = youtubeVideo;
+										}
+									%>
+									<% if (video && video.link) { 
+									
+										let ytId = null;
+										const match = video.link.match(/[?&]v=([^&]+)/);
+										if (match) { ytId = match[1]; }
+									%>
+										<div style="padding: 18px 14px 12px 14px; text-align: center;">
+											<div style="font-size:1.08rem; color:#fff; margin-bottom:7px; font-weight:600;">
+												<%= video.title %>
+											</div>
+											<% if (ytId) { %>
+												<div style="position:relative;width:100%;padding-bottom:56.25%;border-radius:10px;overflow:hidden;background:#222;">
+													<iframe src="https://www.youtube.com/embed/<%= ytId %>?autoplay=1&rel=0" frameborder="0" allowfullscreen allow="autoplay; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+												</div>
+											<% } else { %>
+												<div style="color:#f6a21e;font-size:2rem;">&#9888;</div>
+												<div style="color:#fff;margin-top:.7em;font-size:1.02rem;">Could not load video. <br>
+													<a href="<%= video.link %>" target="_blank" rel="noopener" style="color:#31cf8b;text-decoration:underline;">Watch on YouTube instead</a>
+												</div>
+											<% } %>
+										</div>
+									<% } else { %>
+										<div id="streamSoonText" style="text-align:center; color:#fff; background:rgba(58,87,133,0.16); padding:18px 0 12px 0; font-size:1.3rem; font-weight:600; border-radius:10px;">
+											<span style="color:#f6a21e;font-size:2.2rem;vertical-align:middle;">&#128250;</span>
+											<br>
+											Livestream is not available right now.<br>
+											<span style="color:#ccc;font-size:.99rem;font-weight:400;display:block;margin-top:12px;">Please check back during service times.</span>
+										</div>
+									<% } %>
+								</div>
+							</div>
+							<script>
+							(function(){
+								const watchLiveBtn = document.getElementById('watchLiveBtn');
+								const popup = document.getElementById('liveStreamPopup');
+								const closeBtn = document.getElementById('closeLiveStreamPopup');
+
+								function openPopup(e) {
+									e.preventDefault();
+									popup.style.display = "flex";
+									document.body.style.overflow = "hidden";
+								}
+								function closePopup() {
+									popup.style.display = "none";
+									document.body.style.overflow = "";
+									// Pause video when closing (by reloading iframe)
+									const iframe = popup.querySelector("iframe");
+									if(iframe){ iframe.src = iframe.src; }
+								}
+								watchLiveBtn.addEventListener('click', openPopup);
+								closeBtn.addEventListener('click', closePopup);
+
+								// Close if clicked outside modal content
+								popup.addEventListener('click', function(e) {
+									if (e.target === popup) closePopup();
+								});
+
+								window.addEventListener('keydown', function(e){
+									if(popup.style.display === "flex" && e.key==="Escape") closePopup();
+								});
+							})();
+							</script>
+
+							<div id="nav-icon4">
+
+								<span></span>
+
+								<span></span>
+
+								<span></span>
+
+							</div>
+
+						</nav>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="mobile-nav" id="mobile-nav">
+
+			<div class="res-log">
+
+				<a href="/">
+
+					<img src="/images/churchlogo.png" alt="Responsive Logo" style="width: 200px;">
+
+				</a>
+
+			</div>
+
+			<ul>
+
+				<li>
+
+					<a href="/">Home</a>
+
+				</li>
+
+				<li ><a href="/about">About Us</a>
+
+				</li>
+				<li><a href="/faith-statement">Faith Statement</a>
+				</li>
+				<li><a href="/gallery">Our Gallery</a>
+
+				</li>
+
+				<li><a href="/contact">Contact</a></li>
+
+			</ul>
+
+			<a href="JavaScript:void(0)" id="res-cross"></a>
+
+		</div>
+
+	</header>
+	<!-- Header One Start -->
+
+	<!-- Hero One here -->
+
+	<section class="hero-one" style="position:relative;overflow:hidden;">
+	
+	  <video class="hero-bg-video" autoplay loop muted playsinline poster="/images/bgimage1.jpg">
+		<source src="/videos/video3.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	  </video>
+	  <div class="hero-slide-content-wrapper">
+		<div class="hero-slide-content" data-slide="0">
+		  <h1 class="typewriter-h1" data-strings='["Experience Heaven on Earth<br> Through Spirit-Filled Worship"]'></h1>
+		  <p style="color: aliceblue;">Encounter God’s presence that heals, restores, and empowers your life.</p>
+		</div>
+		<div class="hero-slide-content hide" data-slide="1">
+		  <h1 class="typewriter-h1" data-strings='["We Love Jesus<br> We Live by His Word"]'></h1>
+		  <p style="color: aliceblue;">Jesus Christ is the way, the truth, and the life — the heart of all we believe.</p>
+		</div>
+		<div class="hero-slide-content hide" data-slide="2">
+		  <h1 class="typewriter-h1" data-strings='["Walking in God’s Love<br> Sharing His Power with the World"]'></h1>
+		  <p style="color: aliceblue;">Join a Spirit-led church in Trivandrum where faith becomes life and love changes hearts.</p>
+		</div>
+	  </div>
+	
+	  <style>
+		/* Responsive and large H1 - slightly reduced font size */
+		.typewriter-h1 {
+		  font-size: clamp(1.8rem, 4.4vw + 1.1rem, 4.0rem);
+		  line-height: 1.13;
+		  font-weight: 900;
+		  color: #fff;
+		  text-shadow: 0 2px 16px #000C, 0 1px 0 #0008;
+		  letter-spacing: 1.2px;
+		  margin-bottom: 18px;
+		  min-height: 2.7em;
+		  word-break: break-word;
+		  background: none;
+		}
+		@media (max-width: 600px) {
+		  .typewriter-h1 {
+			font-size: clamp(1.21rem, 5.2vw + 0.38rem, 2.1rem);
+		  }
+		}
+		.typewriter-cursor {
+		  display: inline-block;
+		  animation: blinker 0.9s infinite;
+		  font-family: monospace;
+		  font-weight: 600;
+		  color: #31cf8b;
+		}
+		@keyframes blinker {
+		  50% { opacity: 0; }
+		}
+	  </style>
+	  <script>
+		(function() {
+		  // ---------Hero Slide Logic (keep as is)-------------
+		  var slides = document.querySelectorAll('.hero-slide-content');
+		  var dots = document.querySelectorAll('.hero-dot');
+		  var current = 0;
+		  var timer;
+		  function showSlide(idx) {
+			slides.forEach(function(s, i) {
+			  s.classList.toggle('hide', i !== idx);
+			});
+			dots.forEach(function(d, i) {
+			  d.classList.toggle('active', i === idx);
+			});
+			current = idx;
+			runTypeWriter(slides[idx]);
+		  }
+		  function nextSlide() {
+			var idx = (current + 1) % slides.length;
+			showSlide(idx);
+		  }
+		  dots.forEach(function(dot, idx) {
+			dot.addEventListener('click', function(e) {
+			  e.stopPropagation();
+			  showSlide(idx);
+			  resetAuto();
+			});
+		  });
+		  function startAuto() {
+			timer = setInterval(nextSlide, 5000);
+		  }
+		  function resetAuto() {
+			clearInterval(timer);
+			startAuto();
+		  }
+		  // ---------Typewriter Functionality Begins-------------
+		  // Safeguard: stop multiple typings on quick slide switches
+		  let lastTypeIndex = 0;
+		  function runTypeWriter(slide) {
+			var h1 = slide.querySelector('.typewriter-h1');
+			if(!h1) return;
+			const allH1s = document.querySelectorAll('.typewriter-h1');
+			allH1s.forEach(function(el) {
+			  el.innerHTML = ""; // Clear other slides
+			});
+			let typeIndex = ++lastTypeIndex;
+			var dataStr = h1.getAttribute('data-strings');
+			var strings = [];
+			try {
+			  strings = JSON.parse(dataStr.replace(/'/g,'"'));
+			} catch(e) {
+			  strings = [h1.textContent || ""];
+			}
+			var full = strings[0] ? strings[0] : "";
+			// Remove HTML tags for typing logic, but re-insert them inline
+			// We'll use a but more robust approach supporting <br>
+			function typeOut(str, idx, cb) {
+			  let i = 0, html = "", openTag = false;
+			  function _type() {
+				if(typeIndex !== lastTypeIndex) return; // Aborted because slide changed
+				let char = str[i];
+				if(!char) {
+				  html = str.slice(0,i);
+				  h1.innerHTML = html + '<span class="typewriter-cursor">&#9608;</span>';
+				  setTimeout(function(){
+					if(typeIndex === lastTypeIndex) {
+					  h1.innerHTML = html; // remove cursor at end
+					}
+				  }, 600);
+				  return cb && cb();
+				}
+				if(char === "<") {
+				  // Copy tag completely
+				  let tagEnd = str.indexOf(">", i);
+				  if(tagEnd !== -1) {
+					html = str.slice(0, tagEnd+1);
+					i = tagEnd+1;
+				  }
+				} else {
+				  html = str.slice(0, i+1);
+				  i++;
+				}
+				h1.innerHTML = html + '<span class="typewriter-cursor">&#9608;</span>';
+				let delay = (char === "<") ? 0 : (24 + Math.random()*65);
+				setTimeout(_type, delay);
+			  }
+			  _type();
+			}
+			typeOut(full, 0);
+		  }
+		  showSlide(0);
+		  startAuto();
+		  function resizeHero() {
+			var hero = document.querySelector('.hero-one');
+			var video = document.querySelector('.hero-bg-video');
+			var vh = window.innerHeight;
+			var vw = window.innerWidth;
+			hero.style.height = vh + 'px';
+			video.style.height = vh + 'px';
+			video.style.width = vw + 'px';
+		  }
+		  window.addEventListener('resize', resizeHero, {passive:true});
+		  document.addEventListener('DOMContentLoaded', function(){
+			resizeHero();
+			// Also trigger typewriter for slide 0 on DOM ready
+			runTypeWriter(slides[0]);
+		  });
+		  resizeHero();
+		})();
+	  </script>
+	</section>
+	  
+
+	<!-- banner part end -->
+
+	<!-- Hero One End -->
+
+
+
+	<!-- Fellowship Start -->
+
+	<section class=" daily-fresh" style="position: relative; overflow: hidden;">
+	  <div class="bible-book-bg book-effect" style="position:relative; width:100vw; max-width:100vw; min-height:190px; display:flex; justify-content:center; align-items:center;">
+	    <div class="bible-book-inner" style="display: flex; justify-content: center; align-items: center; width:100%; max-width:800px; position:relative;">
+	      <div class="bible-page single-page" style="width:100%;">
+	        <%
+	       
+	          function formatDateDMY(isoDateStr) {
+	            if (!isoDateStr) return "";
+	            const dateParts = isoDateStr.split("/");
+	      
+	            let day, month, year;
+	            if (dateParts.length === 3 && isoDateStr.includes("/")) {
+	        
+	              day = Number(dateParts[0]);
+	              month = Number(dateParts[1]) - 1;
+	              year = Number(dateParts[2]);
+	            } else if (isoDateStr.includes("-")) {
+	      
+	              const arr = isoDateStr.split("-");
+	              year = Number(arr[0]);
+	              month = Number(arr[1]) - 1;
+	              day = Number(arr[2]);
+	            } else {
+	              return isoDateStr;
+	            }
+	            const d = new Date(year, month, day);
+
+	            return d.toLocaleDateString('en-US', {
+	              weekday: 'long',
+	              year: 'numeric',
+	              month: 'long',
+	              day: '2-digit'
+	            });
+	          }
+	        %>
+	        <div class="bible-page-content-inner" style="padding:32px 24px; text-align:center;">
+	          <h2 class="text-center mx-auto mb-3">
+	            <span>Word of the Day</span>
+	          </h2>
+	          <% if (verse) { %>
+	            <p class="mb-3 text-center" style="font-weight:700;">
+	              <%= verse.text %>
+	            </p>
+	            <footer class="mt-2" style="color: #800020; font-weight: 600;"><%= verse.reference %></footer>
+	            <div class="mt-1" style="color: #3e3e3e; font-size:1.01rem;font-weight:400;">
+	              <%= formatDateDMY(verse.date) %>
+	            </div>
+	          <% } else { %>
+	            <p class="mb-3 text-center" style="font-weight:700;">Bible verse unavailable for today.</p>
+	          <% } %>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+
+	<!-- Fellowship End -->
+	<section class="service-timings-section py-5" style="background: linear-gradient(90deg,#fcf4e4,#f3ede3 100%);">
+	  <div class="container">
+	    <div class="row mb-4 align-items-center justify-content-between">
+	      <div class="col-lg-8 col-md-8 mx-auto text-center">
+	        <h2 class="mb-2" style="font-weight: bold; color: #800020; display: inline-block;">
+	          Our Church Services
+	        </h2>
+	        <p class="mb-0" style="font-size:1.09rem; color:#543e15;">
+	          Join us for a time of worship, fellowship, and the Word. All are welcome!
+	        </p>
+	      </div>
+	    </div>
+
+	    <div class="row justify-content-center">
+	      <div class="col-md-5 mb-4">
+	        <div class="service-card shadow rounded p-4 h-100" style="background: #fffefb; border-left:6px solid #800020;">
+	          <h4 class="mb-2" style="color: #800020; font-weight:700;">Wednesdays</h4>
+	          <p class="mb-1" style="font-size:1.15rem;"><strong>7&nbsp;pm &ndash; 9&nbsp;pm</strong></p>
+	          <p class="mb-1" style="font-size:1.1rem;">Pattom, Trivandrum</p>
+	          <p class="mb-0">
+	            <a href="tel:+917558011101" style="color:#225588; font-weight:600; text-decoration:none;">
+	              <img src="/images/telephone.png" alt="Call" style="width:18px; vertical-align:middle; margin-right:2px;">
+	               +91 75580 11101
+	            </a>	          
+	          </p>
+	          <div class="mt-3">
+	            <a 
+	              href="https://www.google.com/maps/place/Global+English+Training+Centre/@8.5216203,76.9441558,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05bbfa77073e2d:0x91abfe000bae5da7!8m2!3d8.5216203!4d76.9441558!16s%2Fg%2F11xrgp7c61?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D"
+	              target="_blank"
+	              style="display:inline-block; color:#225588; font-weight:600; margin-bottom:10px; text-decoration:underline;">
+	              View on Google Maps
+	            </a>
+				
+	            <div style="width:100%; border-radius:12px; overflow:hidden; margin-top:6px;">
+	              <iframe
+	                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Global English Training Centre Lic lane, plot No 177, Bhaskar Ln, Thiruvananthapuram, Kerala 695004&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+	                width="100%" height="180" frameborder="0"
+	                style="border:0; min-width:170px;"
+	                allowfullscreen=""
+	                loading="lazy"
+	                referrerpolicy="no-referrer-when-downgrade">
+	              </iframe>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-md-5 mb-4">
+	        <div class="service-card shadow rounded p-4 h-100" style="background: #fffefb; border-left:6px solid #800020;">
+	          <h4 class="mb-2" style="color: #800020; font-weight:700;">Saturdays</h4>
+	          <p class="mb-1" style="font-size:1.15rem;"><strong>7&nbsp;pm &ndash; 9&nbsp;pm</strong></p>
+	          <p class="mb-1" style="font-size:1.1rem;">Malayunkeezhu</p>
+	          <p class="mb-0">
+	            <a href="tel:+917558022202" style="color:#225588; font-weight:600; text-decoration:none;">
+	              <img src="/images/telephone.png" alt="Call" style="width:18px; vertical-align:middle; margin-right:2px;">
+	               +91 75580 22202
+	            </a>
+	          </p>
+	          <div class="mt-3">
+	            <a 
+	              href="https://www.google.com/maps/place/Heaven's+Touch+Ministries,+Kannankode,+Meppukkada,+Malayinkeezh,+Kerala+695571/data=!4m2!3m1!1s0x3b05b138bcfe5973:0xe427cfeddb3e4faa?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI1LjQxLjYYACCIJyqZASw5NDI2NzcyNyw5NDI5MjE5NSw5NDI4NDQ3Miw5NDIyMzI5OSw5NDIxNjQxMyw5NDI4MDU3Niw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw5NDI3NTE2OCw5NDI3OTYxOSw0NzA4NDM5Myw5NDIxMzIwMEICSU4%3D&skid=22ededbc-e8b4-4a37-9538-02f837236e6b&g_st=aw"
+	              target="_blank"
+	              style="display:inline-block; color:#225588; font-weight:600; margin-bottom:10px; text-decoration:underline;">
+	              View on Google Maps
+	            </a>
+				
+	            <div style="width:100%; border-radius:12px; overflow:hidden; margin-top:6px;">
+	              <iframe
+	                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Heaven's Touch Ministries Kannankode, Meppukkada, Malayinkeezh, Kerala 695571&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+	                width="100%" height="180" frameborder="0"
+	                style="border:0; min-width:170px;"
+	                allowfullscreen=""
+	                loading="lazy"
+	                referrerpolicy="no-referrer-when-downgrade">
+	              </iframe>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	  <div class="text-center my-4">
+	    <a href="https://whatsapp.com/channel/0029VaAOzgWAojZ1jU0WvS3k" target="_blank" rel="noopener noreferrer"
+	       class="btn theme-btn theme-btn-lg px-4 py-2"
+	       style="background-color:#25D366; color:#fff; font-size:1.18rem; font-weight:600; border-radius:30px; box-shadow:0 4px 20px #25d36633;">
+	      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="26" style="vertical-align:middle; margin-right:7px;">
+	      Join our WhatsApp Community
+	    </a>
+	    <p class="mt-2 mb-0 text-muted" style="font-size:1.03rem;">
+	      Stay updated &amp; connect with us on WhatsApp!
+	    </p>
+	  </div>
+	  </div>
+	</section>
+
+	<!-- Recent Sermons One Start -->
+
+	<section id="live-section" class="sermon-parallax-section position-relative">
+		<div class="parallax-bg" aria-hidden="true"></div>
+		<div class="container">
+			<div class="heading text-center">
+				<img src="/images/churchlogo.png" alt="Church Worship YouTube Live - Heaven’s Touch Ministries" class="img-fluid mb-2 sermon-logo">
+				<p class="lead mb-2 text-shadow">Experience our latest worship services and inspiring messages, live and on demand.</p>
+				<h2 class="mb-4 text-shadow">Our Sermons</h2>
+			</div>
+			<div class="row justify-content-center">
+				<%
+				
+					let secondVideo = null;
+					let secondYtId = null;
+					if (Array.isArray(youtubeVideo) && youtubeVideo.length > 1 && youtubeVideo[1].link) {
+						secondVideo = youtubeVideo[1];
+						const match = youtubeVideo[1].link.match(/[?&]v=([^&]+)/);
+						if (match) { secondYtId = match[1]; }
+					}
+				%>
+				<div class="col-12 col-lg-8 mb-4" data-aos="zoom-in-up" data-aos-duration="1200">
+					<div class="sermon-live shadow-xl rounded-4 px-2 pt-3 pb-4 sermon-live-glass">
+						<div class="sermon-media position-relative live-responsive-iframe">
+							<% if (secondVideo && secondYtId) { %>
+								<iframe 
+									src="https://www.youtube.com/embed/<%= secondYtId %>?rel=0"
+									title="<%= secondVideo.title %>"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen
+									style="border-radius:18px; box-shadow:0 4px 36px #0003; border:none; width:100%; height:100%; background:#000;"></iframe>
+							<% } else if (secondVideo && secondVideo.link) { %>
+								<!-- Could not extract video id; fallback link -->
+								<div class="text-center py-5">
+									<div style="color:#f6a21e;font-size:2.2rem;"><span>&#9888;</span></div>
+									<div style="color:#222;margin-top:.8em;font-size:1.08rem;">
+										Could not load the latest worship video.<br>
+										<a href="<%= secondVideo.link %>" target="_blank" rel="noopener" style="color:#31cf8b;text-decoration:underline;">Watch directly on YouTube</a>
+									</div>
+								</div>
+							<% } else { %>
+								<!-- No video available fallback -->
+								<div class="text-center py-5">
+									<div style="color:#800020;font-size:2.2rem;"><span>&#128250;</span></div>
+									<div style="color:#555;margin-top:.8em;font-size:1.08rem;">
+										The latest worship video will appear here soon.<br>
+										<a href="https://www.youtube.com/@HTministries/videos" target="_blank" rel="noopener" style="color:#225588;text-decoration:underline;">Visit our YouTube channel</a>
+									</div>
+								</div>
+							<% } %>
+						</div>
+						<div class="sermon-data mt-4">
+							<h3 class="mb-1 fw-semibold" style="color:#800020;">Recent Worship Video</h3>
+							<% if (secondVideo && secondVideo.title) { %>
+								<p class="mb-1" style="font-size:1.11rem; font-weight:600;"><%= secondVideo.title %></p>
+							<% } %>
+							<p class="text-muted mb-0">
+								Watch full worship services, messages, and more on our YouTube channel.<br>
+								<a href="https://www.youtube.com/@HTministries/videos" target="_blank" class="sermon-link">
+									View all videos on YouTube
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style>
+		.sermon-parallax-section {
+			position: relative;
+			overflow: hidden;
+			padding-top: 64px;
+			padding-bottom: 48px;
+			z-index: 1;
+		}
+		.sermon-parallax-section .parallax-bg {
+			background: linear-gradient(120deg, #ffeadd99 0%, #e5e6ee 100%), url('/images/testimony.jpg') center center/cover no-repeat;
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+			opacity: 0.68;
+			background-attachment: fixed;
+			animation: floatingBG 21s infinite alternate ease-in-out;
+			transition: opacity 0.6s;
+		}
+		@keyframes floatingBG {
+			0% { background-position: 50% 50%;}
+			100% { background-position: 48% 56%;}
+		}
+		.sermon-parallax-section .container {
+			position: relative;
+			z-index: 2;
+		}
+		.sermon-logo {
+			max-width: 155px;
+			width: 100%;
+			height: auto;
+			filter: drop-shadow(0px 4px 12px #fff8);
+		}
+		.sermon-live-glass {
+			background: rgba(255,254,251, 0.93);
+			backdrop-filter: blur(3px);
+			-webkit-backdrop-filter: blur(3px);
+			box-shadow: 0 10px 36px #3e313118, 0 2px 4px #906a2920;
+			border: 1.5px solid #fff9;
+		}
+		.live-responsive-iframe {
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			min-height: 220px;
+			position: relative;
+		}
+		.live-responsive-iframe iframe {
+			width: 100%!important;
+			height: 100%!important; 
+			min-height: 220px;
+			display: block;
+		}
+		.sermon-live {
+			box-shadow: 0 10px 56px #b5945752, 0 1.5px 12px #80002022;
+			border-radius: 18px;
+			border: none;
+		}
+		.sermon-data h3 {
+			font-size: 1.45rem;
+			font-weight: 600;
+		}
+		.sermon-link {
+			color: #225588;
+			font-weight: 600;
+			text-decoration: underline;
+			transition: color 0.18s;
+		}
+		.sermon-link:hover {
+			color: #800020;
+			text-decoration: underline wavy;
+		}
+		.text-shadow {
+			text-shadow: 0 2px 9px #fff8, 0 1px 2.5px #cbb08722;
+		}
+		/* Responsive styles */
+		@media (max-width: 991.98px) {
+			.sermon-logo {
+				max-width: 110px;
+			}
+			.sermon-parallax-section {
+				padding-top: 38px;
+				padding-bottom: 22px;
+			}
+			.sermon-live { border-radius: 14px; }
+			.live-responsive-iframe, .live-responsive-iframe iframe { min-height: 170px;}
+		}
+		@media (max-width: 767.98px) {
+			.sermon-parallax-section {
+				padding-top: 16px;
+				padding-bottom: 10px;
+			}
+			.sermon-parallax-section .heading h2 {
+				font-size: 1.2rem;
+			}
+			.live-responsive-iframe,
+			.live-responsive-iframe iframe {
+				min-height: 110px;
+			}
+		}
+		@media (max-width: 575.98px) {
+			.sermon-logo {
+				max-width: 88px;
+			}
+			.live-responsive-iframe,
+			.live-responsive-iframe iframe {
+				min-height: 74px;
+			}
+			.sermon-parallax-section .container {
+				padding-left: 0.6rem;
+				padding-right: 0.6rem;
+			}
+		}
+		@media (max-width:400px){
+			.live-responsive-iframe,
+			.live-responsive-iframe iframe {
+				min-height: 45px;
+			}
+			.sermon-live-glass { padding-left: 0.4rem; padding-right: 0.4rem;}
+		}
+	</style>
+
+	<!-- Recent Sermons One End -->
+	<!-- Swiper CDN CSS/JS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+	<section class="testimony-section position-relative py-5" style="background: linear-gradient(120deg, #f2f6ea 60%, #e5efed 100%); overflow: hidden;">
+		<div class="container position-relative">
+			<div class="heading text-center mb-5 wow fadeInDown" data-wow-delay=".15s">
+				<h2 class="mx-auto" style="max-width:650px;font-weight:800;letter-spacing:-1.2px;color:#222;">
+					<span style="display:inline-block; color:#31cf8b;">&#10003;</span> Life-changing <span style="color:#800020;">Testimonies</span>
+				</h2>
+				<p class="lead" style="color: #384b39; margin-top:12px;">
+					Read &amp; share encouraging stories of answered prayers, miracles, and breakthroughs.<br>
+					<span style="color:#800020;">Inspired?</span>
+				</p>
+			</div>
+
+			<!-- Swiper Testimony Slider (dynamically loaded from server render) -->
+			<div class="swiper testimony-swiper" style="max-width:1200px;margin:0 auto;">
+				<div class="swiper-wrapper" id="testimonySwiperWrapper">
+					<%
+						const colors = ['#2a71cd', '#31cf8b', '#c94727', '#554175', '#f6a21e'];
+						if (Array.isArray(testimonials) && testimonials.length > 0) {
+							testimonials.forEach(function(testimonial, idx) { 
+					%>
+						<div class="swiper-slide">
+							<div class="testimony-card card flex-fill border-0 shadow-lg d-flex flex-column align-items-center justify-content-center text-center px-3 py-4 overflow-hidden" 
+								style="background:#fcfff6e6;border-radius:22px;min-height:auto;">
+								<div class="blockquote fw-medium mb-3 position-relative" style="font-size:1.2rem;z-index:1;">
+									<span style="color:<%= colors[idx % colors.length] %>;">
+										&ldquo;<%= testimonial.message %>&rdquo;
+									</span>
+								</div>
+								<div class="blockquote-footer mt-1 fw-semibold" style="color:#000000; font-size:1.05rem;z-index:1;">
+									<%= testimonial.name %>
+									<img src="/images/verified.png" alt="Verified" class="testimony-verified-badge" title="Verified" style="width: 1.25em; height: 1.25em; vertical-align: -0.25em; margin-left: 0.34em;">
+								</div>
+							</div>
+						</div>
+					<% 	});
+						} else { %>
+						<div class='w-100 text-center py-5 text-muted'>No testimonies yet. Be the first to share!</div>
+					<% } %>
+				</div>
+				<!-- Swiper Controls -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+
+			<!-- Write Your Testimony Button -->
+			<div class="text-center mt-5">
+				<button class="btn theme-btn theme-btn-lg px-4 py-2" id="writeTestimonyBtn" style="font-size:1.17rem;font-weight:600;border-radius:28px;">
+					Share Your Testimony
+				</button>
+				<p class="mb-0 mt-2 text-muted" style="font-size:1.02rem;">Your story could inspire someone today!</p>
+			</div>
+		</div>
+		<!-- Bubbles/Shapes for visual pop effect -->
+		<div class="d-none d-md-block">
+			<div style="position:absolute;top:16%;left:2%;width:54px;height:54px;background:linear-gradient(160deg,#cffdde,#31cf8b);opacity:.21;border-radius:50%;"></div>
+			<div style="position:absolute;bottom:20%;right:3%;width:44px;height:44px;background:linear-gradient(120deg,#2a71cd,#afd8f2);opacity:.11;border-radius:50%;"></div>
+			<div style="position:absolute;bottom:7%;left:7%;width:34px;height:34px;background:linear-gradient(120deg,#ffd2b1,#fff);opacity:.17;border-radius:50%;"></div>
+			<div style="position:absolute;top:14%;right:15%;width:27px;height:27px;background:linear-gradient(120deg,#ffd2b1,#31cf8b);opacity:.18;border-radius:50%;"></div>
+		</div>
+
+		<!-- Testimony Modal -->
+		<div class="modal fade" id="testimonyModal" tabindex="-1" aria-labelledby="testimonyModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content" style="border-radius:22px;">
+			  <form id="testimonyForm" autocomplete="off">
+				<div class="modal-header" style="border-bottom:none;">
+				  <h5 class="modal-title" id="testimonyModalLabel" style="font-weight:700;color:#2a71cd;">
+					Share Your Testimony
+				  </h5>
+				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body pb-1">
+				  <div class="mb-3">
+					<label for="testimonyName" class="form-label fw-semibold">Your Name</label>
+					<input type="text" class="form-control" id="testimonyName" name="name" placeholder="Enter your name" required maxlength="100" pattern=".*\S.*">
+				  </div>
+				  <div class="mb-3">
+					<label for="testimonyPhone" class="form-label fw-semibold">
+					  Phone Number
+					</label>
+					<input type="tel"
+						class="form-control"
+						id="testimonyPhone"
+						name="phoneNumber"
+						placeholder="Enter your 10-digit mobile number"
+						required
+						pattern="^[0-9]{10}$"
+						inputmode="numeric"
+						maxlength="10"
+					>
+					<div class="form-text text-muted" style="font-size:.97em;">
+					  Numbers only, no spaces or special characters (e.g. 0812345678)
+					</div>
+				  </div>
+				  <div class="mb-2">
+					<label for="testimonyText" class="form-label fw-semibold">Your Testimony</label>
+					<textarea
+					  class="form-control"
+					  id="testimonyText"
+					  name="message"
+					  rows="4"
+					  placeholder="Encourage others by sharing what God has done!"
+					  required
+					  maxlength="1200"
+					></textarea>
+					<div class="form-text text-muted" style="font-size:.95em;">Max 1200 characters.</div>
+				  </div>
+				</div>
+				<div class="modal-footer" style="border-top:none;">
+				  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" style="border-radius:18px;">Cancel</button>
+				  <button type="submit" class="btn theme-btn theme-btn-lg px-4 py-2" style="font-size:1.17rem;font-weight:600;border-radius:28px;">Submit Testimony</button>
+				</div>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	</section>
+
+	<style>
+		/* Swiper styles for testimonies */
+		.testimony-swiper .swiper-slide {
+			display: flex !important;
+			height: auto;
+			align-items: stretch;
+			justify-content: center;
+			padding:12px 0;
+		}
+		.testimony-card {
+			transition: box-shadow .2s, transform .16s;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+		.testimony-card:hover {
+			box-shadow: 0 8px 32px #2892c920, 0 0 1px #31cf8b10;
+			transform: translateY(-4px) scale(1.02);
+		}
+		.testimony-swiper .swiper-button-prev,
+		.testimony-swiper .swiper-button-next {
+			background: rgba(255,255,255,0.22);
+			backdrop-filter: blur(11px) saturate(140%);
+			-webkit-backdrop-filter: blur(11px) saturate(140%);
+			border-radius: 38px;
+			width: 52px;
+			height: 52px;
+			top: 42%;
+			box-shadow: 0 6px 18px #2a71cd1f;
+			color: #800020;
+			border: 1.5px solid rgba(128,0,32,0.21);
+		}
+		.testimony-swiper .swiper-button-prev:after,
+		.testimony-swiper .swiper-button-next:after {
+			font-size: 22px;
+			font-weight:700;
+		}
+		@media (max-width: 991.98px){
+			.testimony-swiper .swiper-slide {max-width: 95vw;}
+		}
+		.testimony-verified-badge {
+			display: inline-block;
+			color: #31cf8b;
+			font-size: 1.07em;
+			margin-left: 4px;
+			vertical-align: middle;
+		}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script>
+	// Initialize Swiper for testimonies only if the container exists
+	document.addEventListener('DOMContentLoaded', function() {
+		const swiperContainer = document.querySelector('.testimony-swiper');
+		if (swiperContainer) {
+			new Swiper('.testimony-swiper', {
+				slidesPerView: 3,
+				spaceBetween: 24,
+				centeredSlides: false,
+				loop: true,
+				autoplay: { delay: 7000, disableOnInteraction: false },
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				breakpoints: {
+					0: { slidesPerView: 1, spaceBetween: 6 },
+					576: { slidesPerView: 1, spaceBetween: 6 },
+					768: { slidesPerView: 2, spaceBetween: 15 },
+					992: { slidesPerView: 3, spaceBetween: 24 },
+				}
+			});
+		}
+
+		const writeBtn = document.getElementById('writeTestimonyBtn');
+		const modalEl = document.getElementById('testimonyModal');
+		const formEl = document.getElementById('testimonyForm');
+		if (writeBtn && modalEl && formEl) {
+			writeBtn.addEventListener('click', function() {
+				var modal = new bootstrap.Modal(modalEl);
+				formEl.reset();
+				modal.show();
+			});
+
+			formEl.addEventListener('submit', async function(e) {
+				e.preventDefault();
+				const name = document.getElementById('testimonyName').value.trim();
+				const phone = document.getElementById('testimonyPhone').value.trim();
+				const testimony = document.getElementById('testimonyText').value.trim();
+				if (!name || !phone || !testimony) return;
+
+				// Match Express' .body property for phoneNumber (views input field = name="phoneNumber")
+				const payload = { 
+					name, 
+					phoneNumber: phone, 
+					message: testimony 
+				};
+
+				const submitBtn = this.querySelector('button[type="submit"]');
+				const prevBtnText = submitBtn.innerHTML;
+				submitBtn.disabled = true;
+				submitBtn.innerHTML = 'Submitting...';
+
+				try {
+					const res = await fetch('/createTestimonial', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify(payload)
+					});
+					const result = await res.json();
+
+					if (!result.success) {
+						alert('Could not submit your testimony. Please try again!');
+						submitBtn.disabled = false;
+						submitBtn.innerHTML = prevBtnText;
+						return;
+					}
+
+					location.reload();
+				} catch(err) {
+					alert('Could not submit your testimony. Please try again!');
+				} finally {
+					submitBtn.disabled = false;
+					submitBtn.innerHTML = prevBtnText;
+				}
+			});
+		}
+	});
+	</script>
+
+
+	<!-- Digital Ministry Start -->
+
+	<section class=" digital-ministry green-overlay">
+		<div class="parallax" style="background-image: url(/images/counter-bg.webp);"></div>
+		<div class="container">
+			<div class="heading text-center mb-5">
+				<h2 class="text-white mx-auto">Send a Prayer Request</h2>
+				<p class="text-white lead">Submit your prayer request, testimony, or message privately. Our team will pray with you and support you.</p>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-7 col-md-9 col-sm-12">
+					<form id="whatsappRequestForm" class="bg-white rounded shadow p-4" style="max-width:520px;margin:0 auto;">
+						<div class="mb-3">
+							<label for="name" class="form-label fw-semibold">Your Name</label>
+							<input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+						</div>
+						<div class="mb-3">
+							<label for="requestType" class="form-label fw-semibold">Type of Request</label>
+							<select class="form-select" id="requestType" required>
+								<option value="" disabled selected>Select type</option>
+								<option>Prayer Request</option>
+								<option>Testimony</option>
+								<option>General Message</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="message" class="form-label fw-semibold">Your Message</label>
+							<textarea class="form-control" id="message" rows="4" required placeholder="Write your request, praise report, or message to the ministry"></textarea>
+						</div>
+						<div class="text-center mt-4">
+							<button type="submit" class="theme-btn theme-btn-sm" style="font-size:1.1rem;">
+								Send to WhatsApp
+							</button>
+						</div>
+					</form>
+				
+				</div>
+			</div>
+		</div>
+		<script>
+		document.getElementById('whatsappRequestForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+			// Collect form data
+			var name = document.getElementById('name').value.trim();
+			var type = document.getElementById('requestType').value;
+			var message = document.getElementById('message').value.trim();
+			if (!name || !type || !message) return;
+
+			var text = "*New Request via Website*\n"
+				+ "*Name:* " + name + "\n"
+				+ "*Type:* " + type + "\n"
+				+ "*Message:*\n" + message;
+
+			var url = "https://wa.me/917558011101?text=" + encodeURIComponent(text);
+			window.open(url, "_blank");
+		});
+		</script>
+	</section>
+
+	<!-- Digital Ministry End -->
+
+
+
+	<!-- Footer One Start -->
+
+	<footer class="footer-one simple-footer py-4" style="background-color: #800020;">
+		<div class="container text-center footer-mobile">
+			<a href="/">
+				<img src="/images/churchlogo.png" alt="Heaven’s Touch Ministries Logo" style="width:200px; margin-bottom: 10px;">
+			</a>
+			<p class="text-white mb-2" style="font-size:1.05rem;">
+				Heaven’s Touch Ministries &mdash; Bringing hope, love, and the message of Jesus to every home.
+			</p>
+			<ul class="list-inline mb-2">
+				<li class="list-inline-item"><a href="/about" class="text-white text-decoration-none">About</a></li>
+				<li class="list-inline-item"><a href="events.html" class="text-white text-decoration-none">Gallery</a></li>
+				<li class="list-inline-item"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+			</ul>
+			<div class="mb-2">
+				<a href="https://www.instagram.com/heavenstouchministries?igsh=dmIwejVqZHl2bnQ4" target="_blank" rel="noopener"><img src="/images/instagram.png" alt="Instagram" style="width:24px; margin:0 5px;"></a>
+				<a href="https://youtube.com/@htministries?si=YVHJ0dWkkpngniVa" target="_blank" rel="noopener"><img src="/images/youtube.png" alt="YouTube" style="width:24px; margin:0 5px;"></a>
+				<a href="https://www.threads.com/@vinod_wilfred" target="_blank" rel="noopener"><img src="/images/threads.png" alt="Threads" style="width:24px; margin:0 5px;"></a>
+				<a href="https://whatsapp.com/channel/0029VaAOzgWAojZ1jU0WvS3k" target="_blank" rel="noopener"><img src="/images/whatsapp.png" alt="WhatsApp Channel" style="width:24px; margin:0 5px;"></a>
+			</div>
+			<p class="text-white-50 mb-0" style="font-size:0.97rem;">&copy; 2025 Heaven’s Touch Ministries. All Rights Reserved.</p>
+		</div>
+	</footer>
+
+	<!-- Footer One End -->
+	<!-- Mobile Bottom Navigation Bar Start -->
+	
+	<nav class="mobile-bottom-nav" aria-label="Primary bottom navigation" style="display: flex;">
+		<a href="/" class="active" title="Home" aria-label="Home">
+			<span class="icon">
+				<!-- Home SVG Icon -->
+				<svg viewBox="0 0 22 22" width="22" height="22" fill="none"><path d="M2.5 9.6 11 3l8.5 6.6M5.2 12.5v5c0 .8.5 1.5 1.2 1.5h2.1v-5H13.5v5h2.1a1.6 1.6 0 0 0 1.2-1.5v-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			</span>
+			Home
+		</a>
+		<a href="/faith-statement" class="active" title="Faith Statement" aria-label="Faith Statement">
+			<span class="icon">
+				<!-- Faith SVG Icon (book/scroll) -->
+				<svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M4.5 7a2.5 2.5 0 0 1 2.5-2.5h10A2.5 2.5 0 0 1 19.5 7v10a2.5 2.5 0 0 1-2.5 2.5h-10A2.5 2.5 0 0 1 4.5 17V7Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M7 5v14" stroke="currentColor" stroke-width="1.4"/></svg>
+			</span>
+			Faith
+		</a>
+		<a href="/about" class="active" title="About Us" aria-label="About">
+			<span class="icon">
+				<!-- About SVG Icon (user/person, info) -->
+				<svg width="22" height="22" fill="none" viewBox="0 0 22 22"><circle cx="11" cy="7.4" r="3.2" stroke="currentColor" stroke-width="1.4"/><path d="M18 17.2A7.3 7.3 0 0 0 11 13a7.3 7.3 0 0 0-7 4.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+			</span>
+			About
+		</a>
+		<a href="/gallery" class="active" title="Gallery" aria-label="Gallery">
+			<span class="icon">
+				<!-- Gallery SVG Icon (image/photo) -->
+				<svg fill="none" width="22" height="22" viewBox="0 0 22 22"><rect x="3.2" y="4.4" width="15.6" height="13.2" rx="2.3" stroke="currentColor" stroke-width="1.4"/><circle cx="7" cy="8.1" r="1.2" stroke="currentColor" stroke-width="1.2"/><path d="m9.2 11.9 2.3-2.6a1.2 1.2 0 0 1 1.9.1l3.2 4.1c.3.4 0 .9-.4.9H6.3a.5.5 0 0 1-.4-.8l1.9-2.7a1.15 1.15 0 0 1 1.4-.2Z" stroke="currentColor" stroke-width="1.2"/></svg>
+			</span>
+			Gallery
+		</a>
+		<a href="/contact" class="active" title="Contact" aria-label="Contact">
+			<span class="icon">
+				<!-- Contact SVG Icon (message/phone) -->
+				<svg fill="none" width="22" height="22" viewBox="0 0 22 22"><rect x="3.6" y="5.2" width="14.8" height="10.4" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="m4.8 7 5.9 4.4c.7.5 1.7.5 2.4 0l5.1-3.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+			</span>
+			Contact
+		</a>
+	</nav>
+	<!-- Mobile Bottom Navigation Bar End -->
+
+	<div class="floating-contact-icons">
+		<a href="https://wa.me/917558011101" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp" class="whatsapp">
+			<img src="/images/whatsapp.png" alt="WhatsApp Icon">
+			<span class="sr-only">Chat on WhatsApp: +91 7558011101</span>
+		</a>
+		<a href="tel:+917558011101" class="call" title="Call Us" aria-label="Call us">
+			<img src="/images/telephone.png" alt="Telephone Icon">
+			<span class="sr-only">Call us: +91 7558011101</span>
+		</a>
+	</div>
+	<!-- Floating "Watch Live" Text Button (bottom left) -->
+	<style>
+	@media (max-width: 600px) {
+		.floating-watch-live-btn {
+			position: fixed;
+			left: 12px;
+			bottom: 90px;
+			z-index: 999;
+			background: #222;
+			color: #fff;
+			padding: 8px 14px 8px 14px;
+			border-radius: 19px 19px 19px 7px;
+			box-shadow: 0 6px 32px #0006, 0 1px 0 #fff2 inset;
+			font-weight: 600;
+			font-size: 0.99rem;
+			letter-spacing: 0.03em;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			transition: background 0.15s;
+			border: 2.5px solid #f1c161;
+		}
+		.floating-watch-live-btn:hover, .floating-watch-live-btn:focus {
+			background: #1a2;
+			color: #fff;
+			outline: none;
+		}
+		.floating-watch-live-btn svg {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.floating-contact-icons {
+			bottom: 80px !important; /* so they don't overlap */
+		}
+	}
+	@media (min-width: 601px) {
+		.floating-watch-live-btn {
+			display: none !important;
+		}
+	}
+	</style>
+	<button class="floating-watch-live-btn" id="floatingWatchLiveBtn" aria-label="Watch Live Stream" style="display:none;">
+		<!-- Play icon SVG -->
+		<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#222"/><path d="M12.5 10.5V21.5L22 16L12.5 10.5Z" fill="#31cf8b"/></svg>
+		Watch Live
+	</button>
+	<script>
+	(function(){
+		// Show button only on mobile devices
+		function updateButtonDisplay() {
+			var btn = document.getElementById('floatingWatchLiveBtn');
+			if(window.innerWidth <= 600){
+				btn.style.display = 'flex';
+			} else {
+				btn.style.display = 'none';
+			}
+		}
+		window.addEventListener('resize', updateButtonDisplay);
+		window.addEventListener('orientationchange', updateButtonDisplay);
+		document.addEventListener('DOMContentLoaded', updateButtonDisplay);
+
+		// Reuse same modal as desktop
+		const floatingBtn = document.getElementById('floatingWatchLiveBtn');
+		const popup = document.getElementById('liveStreamPopup');
+		const iframe = document.getElementById('liveStreamIframe');
+		const streamUrl = "https://www.youtube.com/embed/live_stream?channel=UC8k4vl2wBEm90LkAMPxQqvA&autoplay=1";
+
+		function openPopup(e) {
+			e.preventDefault();
+			iframe.src = streamUrl;
+			popup.style.display = "flex";
+			document.body.style.overflow = "hidden";
+		}
+		floatingBtn.addEventListener('click', openPopup);
+	})();
+	</script>
+	<!-- Scroll to top -->
+
+	<button id="scrollTop" class="scrollTopStick"><svg viewBox="0 0 490.523 490.523" fill="#fff" height="15">
+			<path style="fill:#FFC107;"
+				d="M487.411,355.047L252.744,120.38c-4.165-4.164-10.917-4.164-15.083,0L2.994,355.047 c-4.093,4.237-3.976,10.99,0.262,15.083c4.134,3.993,10.687,3.993,14.821,0l227.115-227.115l227.115,227.136 c4.237,4.093,10.99,3.976,15.083-0.261c3.993-4.134,3.993-10.688,0-14.821L487.411,355.047z">
+			</path>
+			<path
+				d="M479.859,373.266c-2.831,0.005-5.548-1.115-7.552-3.115L245.192,143.015L18.077,370.151 c-4.237,4.093-10.99,3.976-15.083-0.262c-3.993-4.134-3.993-10.687,0-14.821l234.667-234.667c4.165-4.164,10.917-4.164,15.083,0 l234.667,234.667c4.159,4.172,4.148,10.926-0.024,15.085C485.388,372.146,482.681,373.265,479.859,373.266z">
+			</path>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+			<g> </g>
+		</svg></button>
+
+
+
+	<!-- Jquery -->
+
+	<script src="/js/jquery.min.js"></script>
+
+
+ 	<!-- Waypoint -->
+
+	<script src="/js/jquery.waypoints.min.js"></script>
+
+
+
+	<!-- Counter -->
+
+	<script src="/js/jquery.counterup.min.js"></script>
+
+
+
+	<!-- Slick Slider Js -->
+
+	<script src="/js/slick.min.js"></script>
+
+
+
+	<!-- Animate on scroll Js -->
+
+	<script src="/js/aos.js"></script>
+
+	<!-- Fontawesome Js -->
+
+	<script src="/js/fontawesome.js"></script>
+
+
+
+	<!-- Fancybox Js -->
+
+	<script src="/js/jquery.fancybox.min.js"></script>
+
+	<!-- Bootstrap Js -->
+
+	<script src="/js/bootstrap.min.js"></script>
+
+
+	<!-- Custom Js -->
+
+	<script src="/js/custom.js"></script>
+
+
+</body>
+
+
+</html>
