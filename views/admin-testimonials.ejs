@@ -634,7 +634,7 @@
                                     verified: document.getElementById('editTestimonialVerified').checked
                                 };
                                 try {
-                                    const response = await fetch(`/getTestimonialById/${id}`, {
+                                    const response = await fetch(`/updateTestimonial/${id}`, {
                                         method: 'PUT',
                                         headers: { 'Content-Type': 'application/json' },
                                         body: JSON.stringify(formData)
