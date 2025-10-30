@@ -302,9 +302,62 @@ document.addEventListener("DOMContentLoaded", function() {
 								<a href="#" class="theme-btn" id="watchLiveBtn">Watch Live</a>
 							</div>
 							<!-- Live Stream Popup -->
-							<div id="liveStreamPopup" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.67);justify-content:center;align-items:center;">
-								<div id="liveStreamModalContent" style="background:#222;border-radius:14px;max-width:96vw;max-height:90vh;position:relative;box-shadow:0 6px 40px #1119;">
-									<button id="closeLiveStreamPopup" aria-label="Close" style="position:absolute;right:12px;top:10px;background:none;border:none;font-size:2rem;color:#fff;cursor:pointer;line-height:1;z-index:2;">
+							<style>
+								#liveStreamPopup {
+									display: none;
+									position: fixed;
+									z-index: 9999;
+									left: 0;
+									top: 0;
+									width: 100vw;
+									height: 100vh;
+									background: rgba(0,0,0,0.67);
+									justify-content: center;
+									align-items: flex-start;
+									overflow-y: auto;
+									/* padding for space on top */
+									padding-top: 48px;
+								}
+								#liveStreamModalContent {
+									background: #222;
+									border-radius: 14px;
+									width: 90vw;
+									max-width: 900px;
+									min-width: 320px;
+									/* makes popup taller */
+									height: 76vh;
+									max-height: 92vh;
+									position: relative;
+									box-shadow: 0 6px 40px #1119;
+									margin: 0 auto;
+									display: flex;
+									flex-direction: column;
+									justify-content: flex-start;
+								}
+								#closeLiveStreamPopup {
+									position: absolute;
+									right: 18px;
+									top: 18px;
+									background: none;
+									border: none;
+									font-size: 2.3rem;
+									color: #fff;
+									cursor: pointer;
+									line-height: 1;
+									z-index: 2;
+								}
+								@media (max-width:700px){
+									#liveStreamModalContent{
+										width: 98vw;
+										max-width:98vw;
+										height: 66vh;
+										max-height:88vh;
+									}
+								}
+							</style>
+							<div id="liveStreamPopup">
+								<div id="liveStreamModalContent">
+									<button id="closeLiveStreamPopup" aria-label="Close">
 										&times;
 									</button>
 									<%
@@ -321,13 +374,18 @@ document.addEventListener("DOMContentLoaded", function() {
 										const match = video.link.match(/[?&]v=([^&]+)/);
 										if (match) { ytId = match[1]; }
 									%>
-										<div style="padding: 18px 14px 12px 14px; text-align: center;">
-											<div style="font-size:1.08rem; color:#fff; margin-bottom:7px; font-weight:600;">
+										<div style="padding: 30px 20px 18px 20px; text-align: center;">
+											<div style="font-size:1.15rem; color:#fff; margin-bottom:12px; font-weight:600;">
 												<%= video.title %>
 											</div>
 											<% if (ytId) { %>
-												<div style="position:relative;width:100%;padding-bottom:56.25%;border-radius:10px;overflow:hidden;background:#222;">
-													<iframe src="https://www.youtube.com/embed/<%= ytId %>?rel=0" frameborder="0" allowfullscreen allow="encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+												<div style="position:relative;width:100%;height:60vh;max-height:520px;min-height:220px;border-radius:11px;overflow:hidden;background:#222;">
+													<iframe src="https://www.youtube.com/embed/<%= ytId %>?rel=0"
+														frameborder="0"
+														allowfullscreen
+														allow="encrypted-media"
+														style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+													</iframe>
 												</div>
 											<% } else { %>
 												<div style="color:#f6a21e;font-size:2rem;">&#9888;</div>
@@ -337,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function() {
 											<% } %>
 										</div>
 									<% } else { %>
-										<div id="streamSoonText" style="text-align:center; color:#fff; background:rgba(58,87,133,0.16); padding:18px 0 12px 0; font-size:1.3rem; font-weight:600; border-radius:10px;">
+										<div id="streamSoonText" style="text-align:center; color:#fff; background:rgba(58,87,133,0.16); padding:28px 0 18px 0; font-size:1.36rem; font-weight:600; border-radius:10px;">
 											<span style="color:#f6a21e;font-size:2.2rem;vertical-align:middle;">&#128250;</span>
 											<br>
 											Livestream is not available right now.<br>
@@ -356,6 +414,8 @@ document.addEventListener("DOMContentLoaded", function() {
 									e.preventDefault();
 									popup.style.display = "flex";
 									document.body.style.overflow = "hidden";
+									// Scroll popup to top so close button is visible
+									popup.scrollTop = 0;
 								}
 								function closePopup() {
 									popup.style.display = "none";
@@ -733,7 +793,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	        <div class="service-card shadow rounded p-4 h-100" style="background: #fffefb; border-left:6px solid #800020;">
 	          <h4 class="mb-2" style="color: #800020; font-weight:700;">Saturdays</h4>
 	          <p class="mb-1" style="font-size:1.15rem;"><strong>7&nbsp;pm &ndash; 9&nbsp;pm</strong></p>
-	          <p class="mb-1" style="font-size:1.1rem;">Malayunkeezhu</p>
+	          <p class="mb-1" style="font-size:1.1rem;">Malayinkeezh</p>
 	          <p class="mb-0">
 	            <a href="tel:+917558022202" style="color:#225588; font-weight:600; text-decoration:none;">
 	              <img src="/images/telephone.png" alt="Call" style="width:18px; vertical-align:middle; margin-right:2px;">
@@ -828,17 +888,10 @@ document.addEventListener("DOMContentLoaded", function() {
 								</div>
 							<% } %>
 						</div>
-						<div class="sermon-data mt-4">
-							<h3 class="mb-1 fw-semibold" style="color:#800020;">Recent Worship Video</h3>
-							<% if (secondVideo && secondVideo.title) { %>
-								<p class="mb-1" style="font-size:1.11rem; font-weight:600;"><%= secondVideo.title %></p>
-							<% } %>
-							<p class="text-muted mb-0">
-								Watch full worship services, messages, and more on our YouTube channel.<br>
-								<a href="https://www.youtube.com/@HTministries/videos" target="_blank" class="sermon-link">
-									View all videos on YouTube
-								</a>
-							</p>
+						<div class="sermon-data mt-4 d-flex justify-content-center align-items-center">
+							<a href="https://www.youtube.com/@HTministries/videos" target="_blank" class="btn theme-btn theme-btn-lg px-4 py-2" style="font-size:1.17rem;font-weight:600;border-radius:28px;">
+								More Sermons
+							</a>
 						</div>
 					</div>
 				</div>
